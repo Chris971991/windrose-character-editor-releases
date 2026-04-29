@@ -180,6 +180,8 @@ When a ship is selected:
 - **Consumables** (4 slots): Quick-use items the crew can deploy
 - **Cargo Hold** (28 slots): general ship storage
 
+![Cargo Hold close-up](docs/screenshots/cargo-hold.png)
+
 All slots open the same Item Picker as the character side.
 
 ---
@@ -250,12 +252,16 @@ Restore is disabled while the game is running.
 
 The **(?)** icon in the header (or **Ctrl + /**) opens a modal with:
 
+![Help / About modal](docs/screenshots/help-modal.png)
+
 - **Keyboard shortcuts** reference
 - **How safe is editing?** — auto-backup, round-trip self-check, game-must-be-closed
 - **Where things live** — direct links to your save folder, backup folder, and editor settings folder, each with an Open-in-Explorer button
 - **Catalog & build** — the active catalog source (bundled / hot-patch) and its manifest hash, useful when filing a bug report
 - **Build presets** — export your current edits as a JSON file (`Export current edits`) or import a preset (`Import preset…`) to apply someone else's build to your character. Imports stage the edits as new pending changes — review and click Save when you're happy.
-- **Power tools** — *Stage Max-Out* (level cap, every stat to 60, every talent maxed). Behind a danger-tone confirm. Stages edits only — review and Save when you want to commit.
+- **Power tools** — *Stage Max-Out* (level cap, every stat to 60, every talent maxed). Behind a danger-tone confirm; nothing is written to disk until you click Save.
+
+  ![Stage Max-Out confirmation](docs/screenshots/max-out-confirm.png)
 - **Found a bug?** — direct link to GitHub Issues.
 
 ---
@@ -286,6 +292,8 @@ The **portable .exe does not auto-update** — it's a single-file build. Downloa
 - **Equipment stack guard**: refuses to set count > 1 on equippable items (which use single-item slots) — prevents invalid stack states that would crash the game on next inventory open.
 - **Asset-path validation**: every item path is checked against the game's actual asset manifest before saving. Invalid paths are rejected before they hit the disk.
 - **Discard-edits guard**: switching characters or hitting *Discard all* with unsaved edits prompts an in-app confirm modal — no native browser pop-ups.
+
+  ![Discard all edits confirmation](docs/screenshots/discard-confirm.png)
 
 ---
 
