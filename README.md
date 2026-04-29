@@ -5,6 +5,8 @@ A save-game editor for [Windrose](https://store.steampowered.com/app/3349750/Win
 [![Latest release](https://img.shields.io/github/v/release/Chris971991/windrose-character-editor-releases?style=flat-square)](https://github.com/Chris971991/windrose-character-editor-releases/releases/latest)
 [![Downloads](https://img.shields.io/github/downloads/Chris971991/windrose-character-editor-releases/total?style=flat-square)](https://github.com/Chris971991/windrose-character-editor-releases/releases/latest)
 
+![Character tab — full view](docs/screenshots/hero-character.png)
+
 ---
 
 ## Quick install
@@ -45,6 +47,10 @@ You don't need Node.js, Python, .NET, or any modding tools. Just Windrose instal
 6. **Launch Windrose** and confirm the changes landed.
 
 Your character (stats, talents, inventory, ships) is stored locally and persists across solo and multiplayer sessions, so anything you edit here comes with you when you join a friend's world or a community server. Be considerate of other players and follow each server's rules.
+
+If you have multiple Windrose characters on this PC, the editor opens a picker on first launch so you can choose which one to load (and optionally pin a default for next time):
+
+![Character picker](docs/screenshots/character-picker.png)
 
 ---
 
@@ -104,12 +110,18 @@ Each slot shows the item's icon, name, count badge if stacked, and a small gold 
 
 **Talent radial** — the big circular tree at the top, modeled after the in-game version. Four branches (Fencer / Crusher / Marksman / Toughguy) at 4 compass points.
 
+![Talent radial](docs/screenshots/talent-radial.png)
+
 - **Left-click** a talent dot to add a rank (capped at the talent's max, usually 3)
 - **Right-click** a talent dot to remove a rank
 - **Multi-perk talents** (the ones with a circular split): clicking a different perk switches your active perk to it at rank 1
 - Branch totals are shown at each branch's centre — useful for tracking ring-2 / ring-3 requirements
 - Locked talents (greyed out) need more points spent in the same branch first
 - **Refund all** button (top-right of the radial, shown when you've spent at least one point) drops every talent to 0 in one click
+
+Hovering any talent shows the current and next-rank effect side-by-side so you can see exactly what spending a point will get you:
+
+![Talent hover tooltip](docs/screenshots/talent-hover.png)
 
 **Action bar** (8 slots) — your hotbar. Holds consumables, potions, throwables, weapons.
 
@@ -140,6 +152,8 @@ A small **PAK · bundled / hot-patch** chip in the corner tells you which catalo
 ## Ship tab
 
 Switch via the *Character ⇄ Ship* tab pill at the top of the left column.
+
+![Ship tab — full view](docs/screenshots/ship-tab.png)
 
 ### Left column — Wharf (your fleet)
 
@@ -174,6 +188,12 @@ All slots open the same Item Picker as the character side.
 
 The popup that appears when you click any slot. Same control across character and ship tabs.
 
+![Item picker — Taco selected](docs/screenshots/item-picker.png)
+
+Hovering an item in your inventory shows the full effect breakdown plus stats at your current level (with the **base → your level → max** range so you can see what you have and what you'd gain by upgrading):
+
+![Hover tooltip on equipped weapon](docs/screenshots/hover-tooltip.png)
+
 **Left side** — what's currently in this slot
 
 - Item icon, name, description (the in-game flavor text)
@@ -196,6 +216,8 @@ While the list loads, you'll see spinning loader tiles in the grid. The first ti
 ## Backups
 
 Click **Backups** in the header (or press **Ctrl+B**) to open the browser.
+
+![Backups modal](docs/screenshots/backups.png)
 
 Two sources of backups appear:
 
