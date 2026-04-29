@@ -39,12 +39,12 @@ You don't need Node.js, Python, .NET, or any modding tools. Just Windrose instal
 
 1. **Close Windrose.** The editor refuses to write while the game has the save file open. The header shows a yellow *"Game running — close to save"* pill when this is the case.
 2. **Open the editor.** It auto-detects your save in `%LOCALAPPDATA%\R5\Saved\SaveProfiles\<your-Steam-ID>\…`. If you've never run Windrose on this PC, you'll get a recovery screen explaining where the save is expected.
-3. **First launch shows a welcome screen** covering auto-backup, the lock-while-game-running rule, and "single-player only" guidance. Click *I understand* once and it stays out of the way.
+3. **First launch shows a welcome screen** covering auto-backup, the lock-while-game-running rule, and a heads-up that edited gear travels with your character to any shared server you join. Click *I understand* once and it stays out of the way.
 4. **Make an edit.** Try something small first — bump your level by 1, or add a stat point — and verify it shows up in-game before doing anything bigger.
 5. **Click Save** (or press **Ctrl+S**). The header turns the Save button gold when you have unsaved changes. The editor takes a backup automatically before writing, then commits.
 6. **Launch Windrose** and confirm the changes landed.
 
-If the server rejects your edits when you connect to a guild server, scope shifts to single-player or your-own-server use only.
+Your character (stats, talents, inventory, ships) is stored locally and persists across solo and multiplayer sessions, so anything you edit here comes with you when you join a friend's world or a community server. Be considerate of other players and follow each server's rules.
 
 ---
 
@@ -255,7 +255,7 @@ The **portable .exe does not auto-update** — it's a single-file build. Downloa
 
 ## Safety
 
-- **First-launch welcome modal** — explicitly explains auto-backup, the lock-while-game-running rule, and "single-player only" guidance. Acknowledged once and remembered.
+- **First-launch welcome modal** — explicitly explains auto-backup, the lock-while-game-running rule, and that edits travel with your character into any shared world you join. Acknowledged once and remembered.
 - **Game-lock detection**: the editor checks for the RocksDB `LOCK` file before any save. If Windrose has the save open, the Save button is disabled and the header shows a *"Game running — close to save"* warning.
 - **Pre-save backup**: every save creates a timestamped copy of the entire RocksDB tree (Accounts + Players) before writing. Visible age in the header pill near Save.
 - **Round-trip self-check**: before applying edits, the editor's save layer parses the unmodified blob, re-serialises it, and bails if the bytes aren't identical. Catches parser bugs that would otherwise silently corrupt the save.
@@ -282,7 +282,7 @@ The **portable .exe does not auto-update** — it's a single-file build. Downloa
 
 **The picker is slow to load the first time** — That's the per-item data hydration. Once loaded, it's instant for the rest of your session.
 
-**Game rejects my edited character on a guild server** — The server may run its own progression validation. The editor is intended for single-player and your-own-server use; results on shared servers vary by server config.
+**Game rejects my edited character on a guild server** — Some servers run their own progression validation and may refuse a character whose stats look out of bounds. There's no single "fix" — talk to the server admin if you need their server to accept your character, or just play that character on a different server / in solo.
 
 **My in-game level shows 14 but the editor shows 15 (or vice versa)** — The save stores levels 0-indexed, the in-game UI is 1-indexed. The editor follows the in-game convention. So if the editor says level 15, that's what the game also shows.
 
@@ -301,7 +301,7 @@ The **portable .exe does not auto-update** — it's a single-file build. Downloa
 ## Privacy & disclaimer
 
 - **No telemetry, analytics, or phone-home behaviour.** The editor only contacts GitHub for update checks and gaming.tools for item icon / cosmetic-string fetches. All saves are processed locally on your machine.
-- **Single-player / your-own-server use is the intended scope.** Editing your character may be considered cheating by other players or admins on shared servers — use accordingly. Be courteous to your guild and ask first.
+- **Edits travel with your character.** Your character (stats, talents, inventory, ships) is stored locally and persists across every server you join, so anything you edit here comes with you. Be considerate of other players and respect each server's rules — ask the admin first if you're unsure.
 - **Be cautious with big edits.** Start small (level +1, or a single stat point) and confirm the change works in-game before scaling up. The editor's safety net is the auto-backup, not a guarantee.
 
 ---
