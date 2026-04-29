@@ -1,5 +1,7 @@
 # Windrose Character Editor
 
+![Windrose Character Editor](docs/screenshots/main-hero.png)
+
 A save-game editor for [Windrose](https://store.steampowered.com/app/3349750/Windrose/) (Early Access). Edit your character's level, XP, stats, talents, inventory, and ships — without touching the save files by hand.
 
 [![Latest release](https://img.shields.io/github/v/release/Chris971991/windrose-character-editor-releases?style=flat-square)](https://github.com/Chris971991/windrose-character-editor-releases/releases/latest)
