@@ -200,11 +200,23 @@ When a ship is selected:
 
 All slots open the same Item Picker as the character side.
 
+### Customization picker
+
+Sails, hull colors, and flags each have their own dedicated picker, organised by faction pack (Stock, Brethren, Blackbeard, Buccaneers, Smugglers, Corsairs, etc.) so you can mix-and-match looks across faction style books you've unlocked.
+
+![Sail customization picker](docs/screenshots/customization-sails.png)
+
+![Hull color picker](docs/screenshots/customization-hull.png)
+
+![Flag picker](docs/screenshots/customization-flag.png)
+
 ---
 
 ## Recipes tab
 
 Toggle every recipe paper your character has learned. Useful for unlocking hard-to-find recipes, restoring a corrupted recipe list, or sharing a "fully unlocked" character with friends.
+
+![Recipes tab](docs/screenshots/recipes-tab.png)
 
 The catalog covers cooking, alchemy, building, ship gear, and more. Each recipe row shows the recipe name, category, and a tri-state indicator (locked / unlocked / synthetic). Search filters by name; category chips at the top scope the visible list.
 
@@ -220,6 +232,8 @@ Inventory recipe papers (those `did_misc_recipepaperunlock_*` items in your bag)
 ## Discovery tab
 
 Track every biome's discoveries — same sections, same order, same boss progression locks as the in-game UI.
+
+![Discovery tab — Coastal Jungle](docs/screenshots/discovery-tab.png)
 
 **Four biome cards** (Coastal Jungle, Foothills, Cursed Swamps, Ashlands), each with up to four sections:
 
