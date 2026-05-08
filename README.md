@@ -7,8 +7,6 @@ A save-game editor for [Windrose](https://store.steampowered.com/app/3349750/Win
 [![Latest release](https://img.shields.io/github/v/release/Chris971991/windrose-character-editor-releases?style=flat-square)](https://github.com/Chris971991/windrose-character-editor-releases/releases/latest)
 [![Downloads](https://img.shields.io/github/downloads/Chris971991/windrose-character-editor-releases/total?style=flat-square)](https://github.com/Chris971991/windrose-character-editor-releases/releases/latest)
 
-![Character tab — full view](docs/screenshots/hero-character.png)
-
 ---
 
 ## ⚠ READ FIRST: Disable Steam Cloud for Windrose
